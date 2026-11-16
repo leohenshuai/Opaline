@@ -12,6 +12,9 @@ protocol VideoPlayerViewDelegate: AnyObject {
     func videoPlayerViewDidTapAudioOnly(
         _ playerView: VideoPlayerView
     )
+    func videoPlayerViewDidTapSleepTimer(
+        _ playerView: VideoPlayerView
+    )
 }
 
 final class VideoPlayerView: UIView {
@@ -90,6 +93,7 @@ final class VideoPlayerView: UIView {
     let speedButton = UIButton(type: .system)
     let audioOnlyButton = UIButton(type: .system)
     let loopButton = UIButton(type: .system)
+    let sleepButton = UIButton(type: .system)
 
     /// Repeat the current video instead of ending it. Per video, not per
     /// app: `resetVideoState()` clears it whenever another video loads.

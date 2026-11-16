@@ -12,6 +12,12 @@ extension WatchViewController: VideoPlayerViewDelegate {
         )
     }
 
+    func videoPlayerViewDidTapSleepTimer(
+        _ playerView: VideoPlayerView
+    ) {
+        presentSleepTimerMenu()
+    }
+
     private func menuItem(
         _ title: String,
         action: @escaping (WatchViewController) -> Void
