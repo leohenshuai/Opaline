@@ -443,6 +443,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         return true
     }
 
+    // swiftlint:disable:next cyclomatic_complexity
     private func handleGeneralSelection(_ row: Row) -> Bool {
         switch row {
         case .quality, .qualityCellular:
@@ -543,8 +544,8 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         var options: [(String, SleepTimer.Setting)] = [
             ("sleepTimer.off".localized, .off)
         ]
-        for m in SleepTimer.presetMinutes {
-            options.append((String(format: "sleepTimer.minutes".localized, m), .minutes(m)))
+        for mins in SleepTimer.presetMinutes {
+            options.append((String(format: "sleepTimer.minutes".localized, mins), .minutes(mins)))
         }
         options.append(("sleepTimer.endOfVideo".localized, .endOfVideo))
         for (title, value) in options {

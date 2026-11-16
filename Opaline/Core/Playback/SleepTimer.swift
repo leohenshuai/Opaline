@@ -20,8 +20,8 @@ final class SleepTimer {
         switch setting {
         case .off:
             return "sleepTimer.off".localized
-        case .minutes(let m):
-            return String(format: "sleepTimer.minutes".localized, m)
+        case .minutes(let mins):
+            return String(format: "sleepTimer.minutes".localized, mins)
         case .endOfVideo:
             return "sleepTimer.endOfVideo".localized
         }
@@ -33,13 +33,14 @@ final class SleepTimer {
         timer?.invalidate()
         timer = nil
         setting = new
-        if case .minutes(let m) = new {
-            let t = Timer(timeInterval: TimeInterval(m * 60), repeats: false) { [weak self] _ in
+        if case .minutes(let mins) = new {
+            let interval = TimeInterval(mins * 60)
+            let newTimer = Timer(timeInterval: interval, repeats: false) { [weak self] _ in
                 self?.fire()
             }
             // .common so it still fires while scrolling / in background audio.
-            RunLoop.main.add(t, forMode: .common)
-            timer = t
+            RunLoop.main.add(newTimer, forMode: .common)
+            timer = newTimer
         }
         NotificationCenter.default.post(name: Self.didChange, object: nil)
     }
