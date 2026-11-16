@@ -27,6 +27,16 @@ extension VideoPlayerView {
         sleepButton.addTapFeedback()
         updateSleepButton()
         controlsView.addSubview(sleepButton)
+        activateSleepConstraints()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(updateSleepButton),
+            name: SleepTimer.didChange,
+            object: nil
+        )
+    }
+
+    private func activateSleepConstraints() {
         NSLayoutConstraint.activate([
             sleepButton.centerYAnchor.constraint(
                 equalTo: settingsButton.centerYAnchor
@@ -37,12 +47,6 @@ extension VideoPlayerView {
             sleepButton.widthAnchor.constraint(equalToConstant: 36),
             sleepButton.heightAnchor.constraint(equalToConstant: 36)
         ])
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(updateSleepButton),
-            name: SleepTimer.didChange,
-            object: nil
-        )
     }
 
     @objc
