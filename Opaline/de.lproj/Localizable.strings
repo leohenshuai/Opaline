@@ -538,3 +538,8 @@
 "settings.row.resetIdentity" = "Visitor Identity zurücksetzen";
 "library.downloads.empty" = "Videos, die du herunterlädst, werden hier angezeigt";
 "player.error.noSources" = "Alle Wiedergabequellen sind ausgeschaltet. Aktiviere mindestens eine unter „Einstellungen → Debug → Wiedergabequellen“.";
+
+"settings.row.sleepTimer" = "Schlaf-Timer";
+"sleepTimer.off" = "Aus";
+"sleepTimer.minutes" = "%d Min.";
+"sleepTimer.endOfVideo" = "Nach dem Video";

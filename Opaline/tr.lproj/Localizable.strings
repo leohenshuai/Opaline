@@ -540,3 +540,8 @@
 "settings.row.resetIdentity" = "Visitor identity’yi sıfırla";
 "library.downloads.empty" = "İndirdiğiniz videolar burada gösterilir";
 "player.error.noSources" = "Tüm oynatma kaynakları kapalı. “Ayarlar → Hata Ayıklama → Oynatma kaynakları” bölümünden en az birini açın.";
+
+"settings.row.sleepTimer" = "Uyku zamanlayıcısı";
+"sleepTimer.off" = "Kapalı";
+"sleepTimer.minutes" = "%d dk";
+"sleepTimer.endOfVideo" = "Video bitince";

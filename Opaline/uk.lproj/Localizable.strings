@@ -451,3 +451,8 @@
 "downloads.error.noOptions" = "Це відео не можна завантажити";
 "player.related.downloaded" = "Також завантажені";
 "library.downloads.empty" = "Тут з’являтимуться відео, які ви завантажили";
+
+"settings.row.sleepTimer" = "Таймер сну";
+"sleepTimer.off" = "Вимк.";
+"sleepTimer.minutes" = "%d хв";
+"sleepTimer.endOfVideo" = "Після відео";

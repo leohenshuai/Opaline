@@ -454,3 +454,8 @@
 "settings.row.resetIdentity" = "Đặt lại visitor identity";
 "library.downloads.empty" = "Các video bạn tải xuống sẽ xuất hiện tại đây";
 "player.error.noSources" = "Tất cả nguồn phát đều đang tắt. Hãy bật ít nhất một nguồn trong “Cài đặt → Gỡ lỗi → Nguồn phát”.";
+
+"settings.row.sleepTimer" = "Hẹn giờ tắt";
+"sleepTimer.off" = "Tắt";
+"sleepTimer.minutes" = "%d phút";
+"sleepTimer.endOfVideo" = "Hết video";

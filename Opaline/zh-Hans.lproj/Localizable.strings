@@ -540,3 +540,8 @@
 "settings.row.resetIdentity" = "重置 visitor identity";
 "library.downloads.empty" = "你下载的视频将显示在这里";
 "player.error.noSources" = "所有播放源都已关闭。请在「设置 → 调试 → 播放源」中至少打开一个。";
+
+"settings.row.sleepTimer" = "睡眠定时";
+"sleepTimer.off" = "关闭";
+"sleepTimer.minutes" = "%d 分钟";
+"sleepTimer.endOfVideo" = "播完当前视频";

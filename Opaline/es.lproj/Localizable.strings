@@ -536,3 +536,8 @@
 "settings.row.resetIdentity" = "Restablecer visitor identity";
 "library.downloads.empty" = "Los videos que descargues aparecerán aquí";
 "player.error.noSources" = "Todas las fuentes de reproducción están desactivadas. Activa al menos una en «Ajustes → Depuración → Fuentes de reproducción».";
+
+"settings.row.sleepTimer" = "Temporizador de sueño";
+"sleepTimer.off" = "Desactivado";
+"sleepTimer.minutes" = "%d min";
+"sleepTimer.endOfVideo" = "Al terminar el vídeo";

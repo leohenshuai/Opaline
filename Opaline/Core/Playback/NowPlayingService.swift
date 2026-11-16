@@ -177,6 +177,12 @@ final class NowPlayingService {
     /// A remote pause is as deliberate as tapping our own pause button, so the
     /// session announces it. Without that, the player reads it as a pause it
     /// did not ask for and plays again half a second later.
+    func pauseForSleepTimer() {
+        DispatchQueue.main.async { [weak self] in
+            self?.pauseFromRemote()
+        }
+    }
+
     private func pauseFromRemote() {
         onRemotePause?()
         player?.pause()

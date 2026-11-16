@@ -21,6 +21,13 @@ extension WatchViewController {
             }
             return
         }
+        if SleepTimer.shared.consumeVideoEnd() {
+            AppLog.player("playToEnd: sleep timer stop")
+            DispatchQueue.main.async { [weak self] in
+                self?.showEndScreen(reason: "sleep timer")
+            }
+            return
+        }
         if let next = queue.nextVideo {
             playQueueEntry(next)
             return

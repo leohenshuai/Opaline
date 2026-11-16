@@ -536,3 +536,8 @@
 "settings.row.resetIdentity" = "Reimposta visitor identity";
 "library.downloads.empty" = "I video che scarichi verranno visualizzati qui";
 "player.error.noSources" = "Tutte le sorgenti di riproduzione sono disattivate. Attivane almeno una in «Impostazioni → Debug → Sorgenti di riproduzione».";
+
+"settings.row.sleepTimer" = "Timer di spegnimento";
+"sleepTimer.off" = "Disattivato";
+"sleepTimer.minutes" = "%d min";
+"sleepTimer.endOfVideo" = "Fine del video";

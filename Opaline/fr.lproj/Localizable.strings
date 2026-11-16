@@ -536,3 +536,8 @@
 "settings.row.resetIdentity" = "Réinitialiser le visitor identity";
 "library.downloads.empty" = "Les vidéos que vous téléchargez s'afficheront ici";
 "player.error.noSources" = "Toutes les sources de lecture sont désactivées. Activez-en au moins une dans « Paramètres → Débogage → Sources de lecture ».";
+
+"settings.row.sleepTimer" = "Minuterie de sommeil";
+"sleepTimer.off" = "Désactivée";
+"sleepTimer.minutes" = "%d min";
+"sleepTimer.endOfVideo" = "Fin de la vidéo";

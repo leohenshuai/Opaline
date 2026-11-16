@@ -454,3 +454,8 @@
 "settings.playbackChain.signInNeeded" = "Войдите, чтобы использовать этот источник";
 "settings.playbackChain.footer" = "Перебираются сверху вниз, пока один не заиграет. Перетащите, чтобы изменить порядок, ненужные выключите.";
 "player.error.noSources" = "Все источники воспроизведения выключены. Включите хотя бы один в «Настройки → Отладка → Источники воспроизведения».";
+
+"settings.row.sleepTimer" = "Таймер сна";
+"sleepTimer.off" = "Выкл.";
+"sleepTimer.minutes" = "%d мин";
+"sleepTimer.endOfVideo" = "После видео";

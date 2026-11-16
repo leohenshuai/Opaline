@@ -14,7 +14,7 @@ final class SettingsViewController: UIViewController {
         case downloadQuality, downloadComments, downloadCaptions
         case showShorts, shortsPlayer, shortsGrouping
         case autoZoomToFill
-        case autoplayEnabled, autoplayMixEnabled
+        case autoplayEnabled, autoplayMixEnabled, sleepTimer
         case autoDubEnabled, autoDubLanguage, autoDubIgnoreAI
         case homeLayout, defaultTab
         case persistCache, feedCacheDays
@@ -298,6 +298,11 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             ) {
                 AutoplayPreference.isMixEnabled = $0
             }
+        case .sleepTimer:
+            return makeDisclosureCell(
+                "settings.row.sleepTimer".localized,
+                value: SleepTimer.shared.displayName
+            )
         case .autoDubEnabled:
             return makeAutoDubToggleCell()
         case .autoDubLanguage:
@@ -442,6 +447,8 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         switch row {
         case .quality, .qualityCellular:
             showQualityPicker(forCellular: row == .qualityCellular)
+        case .sleepTimer:
+            showSleepTimerPicker()
         case .shortsPlayer:
             showShortsPlayerPicker()
         case .feedCacheDays:
@@ -518,6 +525,34 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
                 self.reloadAllSettings()
             }
             if quality == ThumbnailQuality.selected {
+                action.setValue(true, forKey: "checked")
+            }
+            sheet.addAction(action)
+        }
+        sheet.addAction(UIAlertAction(title: "common.cancel".localized, style: .cancel))
+        configureCenteredPopover(sheet)
+        present(sheet, animated: true)
+    }
+
+    private func showSleepTimerPicker() {
+        let sheet = UIAlertController(
+            title: "settings.row.sleepTimer".localized,
+            message: nil,
+            preferredStyle: .actionSheet
+        )
+        var options: [(String, SleepTimer.Setting)] = [
+            ("sleepTimer.off".localized, .off)
+        ]
+        for m in SleepTimer.presetMinutes {
+            options.append((String(format: "sleepTimer.minutes".localized, m), .minutes(m)))
+        }
+        options.append(("sleepTimer.endOfVideo".localized, .endOfVideo))
+        for (title, value) in options {
+            let action = UIAlertAction(title: title, style: .default) { _ in
+                SleepTimer.shared.set(value)
+                self.reloadAllSettings()
+            }
+            if value == SleepTimer.shared.setting {
                 action.setValue(true, forKey: "checked")
             }
             sheet.addAction(action)

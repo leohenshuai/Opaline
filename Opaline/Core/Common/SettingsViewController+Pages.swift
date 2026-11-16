@@ -142,7 +142,7 @@ extension SettingsViewController {
                 rows: [
                     .backgroundPlayback, .pipEnabled,
                     .autoZoomToFill, .hideStatusBar,
-                    .autoplayEnabled, .autoplayMixEnabled
+                    .autoplayEnabled, .autoplayMixEnabled, .sleepTimer
                 ]
             ),
             Section(

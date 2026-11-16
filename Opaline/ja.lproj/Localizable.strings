@@ -540,3 +540,8 @@
 "settings.row.resetIdentity" = "visitor identity をリセット";
 "library.downloads.empty" = "ダウンロードした動画がここに表示されます";
 "player.error.noSources" = "再生ソースがすべてオフになっています。「設定 → デバッグ → 再生ソース」で少なくとも 1 つオンにしてください。";
+
+"settings.row.sleepTimer" = "スリープタイマー";
+"sleepTimer.off" = "オフ";
+"sleepTimer.minutes" = "%d分";
+"sleepTimer.endOfVideo" = "動画の終了時";

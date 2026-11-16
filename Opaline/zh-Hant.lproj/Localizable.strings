@@ -540,3 +540,8 @@
 "settings.row.resetIdentity" = "重設 visitor identity";
 "library.downloads.empty" = "你下載的影片會顯示在這裡";
 "player.error.noSources" = "所有播放來源都已關閉。請在「設定 → 除錯 → 播放來源」中至少開啟一個。";
+
+"settings.row.sleepTimer" = "睡眠定時";
+"sleepTimer.off" = "關閉";
+"sleepTimer.minutes" = "%d 分鐘";
+"sleepTimer.endOfVideo" = "播完目前影片";
