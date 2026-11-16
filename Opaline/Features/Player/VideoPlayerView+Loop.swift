@@ -29,7 +29,7 @@ extension VideoPlayerView {
                 equalTo: settingsButton.centerYAnchor
             ),
             loopButton.trailingAnchor.constraint(
-                equalTo: audioOnlyButton.leadingAnchor, constant: -4
+                equalTo: sleepButton.leadingAnchor, constant: -4
             ),
             loopButton.widthAnchor.constraint(equalToConstant: 36),
             loopButton.heightAnchor.constraint(equalToConstant: 36)

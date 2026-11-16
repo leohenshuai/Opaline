@@ -2,21 +2,13 @@ import UIKit
 
 // MARK: - Sleep timer button
 //
-// Top control row, left of the loop button. Tinted with the accent colour
-// while a timer is running; tapping opens the duration menu.
+// Top control row, directly left of the audio-only button. The loop button
+// sits further left and is hidden for queues, so it is not the anchor.
+// Tinted with the accent colour while a timer is running.
 
 extension VideoPlayerView {
     func configureSleepButton() {
-        if #available(iOS 14.0, *),
-           let icon = UIImage(systemName: "moon.zzz") {
-            sleepButton.setImage(icon, for: .normal)
-        } else {
-            sleepButton.setTitle("Zz", for: .normal)
-            sleepButton.titleLabel?.font = UIFont.systemFont(
-                ofSize: 13,
-                weight: .bold
-            )
-        }
+        sleepButton.setImage(PlayerIcons.sleepTimer(), for: .normal)
         sleepButton.accessibilityLabel = "settings.row.sleepTimer".localized
         sleepButton.translatesAutoresizingMaskIntoConstraints = false
         sleepButton.addTarget(
@@ -42,7 +34,7 @@ extension VideoPlayerView {
                 equalTo: settingsButton.centerYAnchor
             ),
             sleepButton.trailingAnchor.constraint(
-                equalTo: loopButton.leadingAnchor, constant: -4
+                equalTo: audioOnlyButton.leadingAnchor, constant: -4
             ),
             sleepButton.widthAnchor.constraint(equalToConstant: 36),
             sleepButton.heightAnchor.constraint(equalToConstant: 36)
@@ -54,7 +46,6 @@ extension VideoPlayerView {
         sleepButton.tintColor = SleepTimer.shared.setting == .off
             ? .white
             : ThemeManager.shared.accent
-        sleepButton.setTitleColor(sleepButton.tintColor, for: .normal)
     }
 
     @objc

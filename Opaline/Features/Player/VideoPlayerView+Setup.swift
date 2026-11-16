@@ -208,8 +208,8 @@ extension VideoPlayerView {
         configureCCButton()
         configureSpeedButton()
         configureAudioOnlyButton()
-        configureLoopButton()
         configureSleepButton()
+        configureLoopButton()
         activateTopBarConstraints()
     }
 
